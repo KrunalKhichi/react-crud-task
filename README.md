@@ -35,6 +35,7 @@ Configure environment variables:
 
 ```
 REACT_APP_API_KEY=your_env_key
+REACT_APP_BASE_URL=https://wft-geo-db.p.rapidapi.com/v1/geo
 ```
 
 ## Available Scripts
