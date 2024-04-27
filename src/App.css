@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+.container {
+  padding: 20px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  padding-block: 0px;
+  line-height: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.search-box {
+  position: relative;
+  width: 241px;
+  height: 38px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  padding: 6px 70px 6px 12px;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 420px) {
+  .search-box {
+    width: 175px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-box:focus, .search-box:active {
+  border-color: #7952b3;
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+
+.search-box:disabled {
+  background-color: rgb(233, 236, 239)
+}
+
+.search-box-container {
+  position: relative;
+  width: fit-content;
+}
+
+.keyboard-shortcut {
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  border-color: rgb(222, 226, 230);
+  border-radius: 2px;
+  height: 24px;
+  padding: 0 4px;
+  border: 1px solid rgb(222, 226, 230);
 }
 
-.App-link {
-  color: #61dafb;
+.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-click{
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.warning{
+  color: red;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.pagination {
+  row-gap: 15px;
+  flex-wrap: wrap;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pagination li a {
+  color: #333;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+
+.pagination li a:hover {
+  cursor: pointer;
+}
+
+.pagination .active a {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination-limit input{
+  width: 50px;
+  padding: 5px;
+  margin-left: 10px;
 }

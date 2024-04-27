@@ -1,0 +1,37 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    border: 1px solid rgb(222, 226, 230);
+    font-weight: 700;
+}
+
+.table th {
+    text-align: left;
+}
+
+.table-container{
+    position: relative;
+}
+
+.country-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .table {
+        overflow-x: auto;
+    }
+    .table th,
+    .table td {
+        white-space: nowrap;
+    }
+}
