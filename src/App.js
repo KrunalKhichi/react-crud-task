@@ -100,7 +100,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <SearchBox onSearch={handleSearch} loader={loader} />
+        <SearchBox searchTerm={data.searchTerm} onSearch={handleSearch} loader={loader} />
         <Table searchTerm={data.searchTerm} searchData={countriesData} loader={loader} />
 
         {countriesData.length > 0 && (

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
-const SearchBox = ({ onSearch, loader }) => {
+const SearchBox = ({ onSearch, loader, searchTerm }) => {
   const inputRef = useRef();
   const [query, setQuery] = useState("");
 
@@ -33,7 +33,7 @@ const SearchBox = ({ onSearch, loader }) => {
   }, []); // Ensure this effect runs only once
 
   const handleKeyPress = (event) => {
-    if (event.key === "Enter" && query !== "") {
+    if (event.key === "Enter" && query !== "" && searchTerm !== query) {
       onSearch(query);
     }
   };
